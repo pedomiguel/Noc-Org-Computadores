@@ -55,8 +55,6 @@ void Router::route_xy(Package& pkg) {
   }
 }
 
-
-
 void Router::route_west_first(Package& pkg) {
   if (pkg.dest_x < x && out_ports[WEST].num_free() > 0) {
     out_ports[WEST].write(pkg);
