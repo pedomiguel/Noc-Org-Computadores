@@ -9,8 +9,10 @@
 SC_MODULE(Top) {
   int n; // Square dimention
   Router** nodes;
-  // Add enlaces
 
+  SC_CTOR(Top) = delete;
+  Top(sc_core::sc_module_name name, int size);
+  ~Top();
 };
 
 #endif // !TOP_HPP

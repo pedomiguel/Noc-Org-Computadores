@@ -21,3 +21,10 @@ Top::Top(sc_core::sc_module_name name, int size)
     }
   }
 }
+
+Top::~Top() {
+  for (int i = 0; i < n * n; ++i) {
+    delete nodes[i];
+  }
+  delete [] nodes;
+}
