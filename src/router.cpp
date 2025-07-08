@@ -1,8 +1,6 @@
-#include <systemc.h>
 #include "../include/router.hpp"
-#include "sysc/kernel/sc_module.h"
-#include "sysc/kernel/sc_module_name.h"
-#include "sysc/kernel/sc_time.h"
+
+#include <systemc.h>
 
 Router::Router(sc_core::sc_module_name name, Algorithm algorithm)
 : sc_module(name), algorithm(algorithm) {

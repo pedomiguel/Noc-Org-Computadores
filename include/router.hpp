@@ -1,8 +1,6 @@
-#include "sysc/communication/sc_fifo.h"
-#include "sysc/communication/sc_fifo_ports.h"
-#include "sysc/kernel/sc_module.h"
-#include <systemc.h>
 #include "package.hpp"
+
+#include <systemc.h>
 
 #ifndef ROUTER_HPP
 #define ROUTER_HPP
