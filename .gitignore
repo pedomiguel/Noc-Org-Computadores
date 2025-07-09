@@ -1,4 +1,6 @@
 .clangd
 *.vim
 
+build/
+
 VHDL-RASOC/
