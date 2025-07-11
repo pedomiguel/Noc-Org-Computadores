@@ -2,8 +2,8 @@
 
 #include <systemc.h>
 
-Router::Router(sc_core::sc_module_name name, Algorithm algorithm)
-: sc_module(name), algorithm(algorithm) {
+Router::Router(sc_core::sc_module_name name, Algorithm algorithm, int _x, int _y)
+: sc_module(name), algorithm(algorithm), x(_x), y(_y) {
   SC_THREAD(input_process);
   SC_THREAD(routing_process);
 }

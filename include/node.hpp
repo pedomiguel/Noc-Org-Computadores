@@ -14,6 +14,7 @@ SC_MODULE(Node) {
 
   SC_CTOR(Node);
   Node(sc_core::sc_module_name name, int x, int y);
+  Node();
 };
 
 #endif

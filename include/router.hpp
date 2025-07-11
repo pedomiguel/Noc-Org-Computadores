@@ -24,7 +24,8 @@ SC_MODULE(Router) {
   void route_west_first(Package& package);
 
   SC_CTOR(Router);
-  Router(sc_core::sc_module_name name, Algorithm algorithm);
+  Router(sc_core::sc_module_name name, Algorithm algorithm, int x, int y);
+  Router();
 };
 
 #endif
