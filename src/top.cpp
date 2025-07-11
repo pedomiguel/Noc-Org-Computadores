@@ -12,10 +12,10 @@ Top::Top(sc_core::sc_module_name name, int size)
     for (int j = 0; j < n; ++j) {
       int idx = i * n + j;
 
-      std::string node_name = "Node_" + std::to_string(j) + std::to_string(i);
+      std::string router_name = "Router(" + std::to_string(j) + "," + std::to_string(i) + ")";
       Algorithm algorithm = XY; // Define dynamically
 
-      nodes[idx] = new Router(node_name.c_str(), algorithm);
+      nodes[idx] = new Router(router_name.c_str(), algorithm);
       nodes[idx]->x = i;
       nodes[idx]->y = j;
     }
