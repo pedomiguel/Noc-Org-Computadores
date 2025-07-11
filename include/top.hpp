@@ -16,7 +16,7 @@ SC_MODULE(Top) {
   sc_core::sc_fifo<Package>* links;
 
   SC_CTOR(Top) = delete;
-  Top(sc_core::sc_module_name name, int size);
+  Top(sc_core::sc_module_name name, int size, Algorithm algorithm);
   ~Top();
 };
 

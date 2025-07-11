@@ -16,7 +16,7 @@ build/test_%: tests/%.cpp $(SRC) | build
 all: $(OBJS)
 
 run-%: build/test_%
-	$(LDLIBPATH) $<
+	$(LDLIBPATH) $< $(size) $(alg) $(pkg_cnt)
 
 clean:
 	rm -rf build

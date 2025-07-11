@@ -4,7 +4,7 @@
 #include <string>
 #include <systemc.h>
 
-Top::Top(sc_core::sc_module_name name, int size)
+Top::Top(sc_core::sc_module_name name, int size, Algorithm algorithm)
   : sc_module(name), n(size) {
   routers = new Router**[n];
   nodes = new Node**[n];
@@ -16,7 +16,7 @@ Top::Top(sc_core::sc_module_name name, int size)
 
     for(int j=0; j<n; j++) {
         std::string router_name = "router_" + std::to_string(i) + std::to_string(j);
-        routers[i][j] = new Router(router_name.c_str(), XY, i, j);
+        routers[i][j] = new Router(router_name.c_str(), algorithm, i, j);
 
         std::string node_name = "node_" + std::to_string(i) + std::to_string(j);
         nodes[i][j] = new Node(node_name.c_str(), i, j);
